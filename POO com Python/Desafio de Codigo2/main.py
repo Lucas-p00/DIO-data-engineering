@@ -9,15 +9,13 @@ class Categoria:
         self.nome = nome
         self.vendas = []
 
-    # Método para adicionar uma venda à lista de vendas da categoria
     def adicionar_venda(self, venda):
         self.vendas.append(venda)
 
-    # Método para calcular e retornar o total das vendas da categoria
     def total_vendas(self):
         total = 0
         for venda in self.vendas:
-            total += venda.valor  # O valor já representa o total (quantidade * valor unitário)
+            total += venda.valor 
         return total
     
 
@@ -37,12 +35,10 @@ def main():
             valor = float(valor.strip())
 
             venda = Venda(produto.strip(), quantidade, valor)
-            # TODOS: Adicione a venda à categoria usando o método adicionar_venda:
             categoria.adicionar_venda(venda)
 
         categorias.append(categoria)
     
-    # Exibindo os totais de vendas para cada categoria
     for categoria in categorias:
         total = categoria.total_vendas()
         print(f"Vendas em {categoria.nome}: {total:.1f}")
