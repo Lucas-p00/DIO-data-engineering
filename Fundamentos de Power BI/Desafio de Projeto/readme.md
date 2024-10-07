@@ -1,4 +1,4 @@
-## Dashboard de Finanças
+## Relatório de Finanças
 
 ![Dashboard](images/dashboard_financial_sample-1.png)
 
